@@ -88,7 +88,7 @@ export const Home = () => {
                             </div>
                         </div>
                 </section>
-                <div className="main__wrapper__description">
+                <div className="main__wrapper__description parallax">
                     <div className="container">
                         <div className="description__wrapper">
                             <div className="description__bird">
