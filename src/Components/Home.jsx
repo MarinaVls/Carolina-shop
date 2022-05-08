@@ -5,11 +5,34 @@ import infoReklama2 from '../image/home-page3.png'
 import bird from '../image/home-page4.png'
 import arrowRight from '../image/arrow-right.png'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 export const Home = () => {
+
+    useEffect( () => {    
+        let sliderValues = {
+            '01': 'Бесплатная доставка в течении трех дней',
+            '02': 'Скидка 10 % при заказе от 50$',
+            '03': 'Бесплатные пробники с каждым заказом'
+        }
+        let index = 0; 
+        let sliderCount = document.querySelector('.promo__slider__count');
+        let sliderDescription = document.querySelector('.promo__slider__description')
+        let listOfSliderValues = Object.entries(sliderValues);
+        setInterval(() => {
+                const [key, value]  = listOfSliderValues[index]
+                sliderCount.innerHTML = `${key}`;
+                sliderDescription.innerHTML = `${value}`;
+                index++; 
+
+                if(index > listOfSliderValues.length-1){
+                    index = 0;
+                }    
+        },5000)
+    }, []);
+
     return(
-        <>
         <main className="main">
             <div className="main__wrapper">
                 <section className="promo">
@@ -22,7 +45,7 @@ export const Home = () => {
                                     <div className="promo__slider__line">
                                         <hr />
                                     </div>
-                                    <div className="promo__slider__description"><span>Бесплатная доставка в течении трех дней</span></div>
+                                    <div className="promo__slider__description">Бесплатная доставка в течении трех дней</div>
                                     <Link to='/shop'><button className="button promo__slider__btn">В магазин</button></Link>
                                 </div>
                             </div>
@@ -85,7 +108,7 @@ export const Home = () => {
                 </div>
             </div>
         </main>
-        </>  
+
     )
 }
 
