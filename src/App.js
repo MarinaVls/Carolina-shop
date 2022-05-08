@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import '../src/css/style.css'
+import { Footer } from './Components/Footer'
+import { Header } from './Components/Header'
+import { Main } from './Components/Main'
+import { Context } from './Context/index'
+import {addToBasket} from './utils/index'
 
-function App() {
+
+export const App = () => {
+  const [basket, setBasket] = useState(JSON.parse(localStorage.getItem('basket')) || [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Context.Provider value = {{ addToBasket, basket, setBasket}}>
+      <div className="App">
+        <Header />
+        <Main />
+        <Footer />
+      </div>
+    </Context.Provider>
+      
+  )
 }
-
-export default App;
