@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
 import { FilterModal } from "./FilterModal"
 import { ShopItem } from "./ShopItem"
+import { Spin, Space } from 'antd';
+
 
 export const Shop = () => {
-
+    
     const [data, setData] = useState([]);
     const [filterValue, setFilterValue]  = useState('default');
     const [defaultData,  setDefaultData] = useState([]);
@@ -55,7 +57,14 @@ export const Shop = () => {
                                 </ul> 
                         </div>
                     </div>
-                : <p>Loading...</p> }
+                    
+                : <div className="spin__wrapper">
+                    <Space  size="middle">
+                        <Spin size="small" />
+                        <Spin />
+                        <Spin size="large" />
+                    </Space>
+                </div>}
             </div>
         </div>
     )
