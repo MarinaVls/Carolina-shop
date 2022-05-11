@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import { FilterModal } from "./FilterModal"
-import { ShopItem } from "./ShopItem"
+import { FilterModal } from "../Shop/FilterModal"
+import { ShopItem } from "../Shop/ShopItem"
 import { Spin, Space } from 'antd';
+import './Shop.css'
 
 
 export const Shop = () => {

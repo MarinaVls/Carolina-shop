@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom"
-import { Context } from "../Context/index";
+import { Context } from "../../Context/index";
 
 export const ShopItem = ({product}) => {
     const {id, name, price, image_link} = product
@@ -20,11 +20,9 @@ export const ShopItem = ({product}) => {
                                     <div className="main__shop__products__item__name" onClick={() => {openClick()}}>
                                         {name}
                                     </div>
-                                    <div className="main__shop__products__item__price">
-                                        {price} $
-                                    </div>
+                                    <div className="main__shop__products__item__price">{price}$</div>
                                     <div className="main__shop__products__item__add">
-                                        <button id={id} onClick={ () => {addToBasket(product, basket, setBasket)}} className="button main__shop__products__item__btn" >Добавить в корзину</button>
+                                        <button id={id} onClick={() => {addToBasket(product, basket, setBasket)}} className="button main__shop__products__item__btn" >Добавить в корзину</button>
                                     </div>
                                 </div>
                             </li>

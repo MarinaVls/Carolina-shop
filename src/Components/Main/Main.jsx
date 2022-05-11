@@ -1,15 +1,16 @@
 import { Routes, Route } from 'react-router-dom'
-import { Shop } from './Shop';
-import { Basket } from './Basket'
-import { Product } from './Product'
-import { Contacts } from './Contacts'
-import { About } from './About'
-import { Home } from './Home';
-import { NotFound } from './NotFound';
+import { Shop } from '../Shop/Shop';
+import { Basket } from '../Basket/Basket'
+import { Product } from '../Product/Product'
+import { Contacts } from '../Contacts/Contacts'
+import { About } from '../About/About'
+import { Home } from '../Home/Home';
+import { NotFound } from '../NotFound';
 
 export const Main = () => {
-    return(
-      <main className="main">     
+
+  return(
+      <main className="main"> 
          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
@@ -20,5 +21,5 @@ export const Main = () => {
             <Route path="*" element={<NotFound />} /> 
           </Routes>
       </main>
-    )
+  )
 }

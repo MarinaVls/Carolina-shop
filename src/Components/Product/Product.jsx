@@ -1,14 +1,17 @@
 import { useContext, useEffect, useState } from "react"
-import { Link, useNavigate, useParams } from "react-router-dom"
-import buttonCart from '../image/button-cart.png'
-import buttonBack from '../image/button-back.png'
-import { Context } from "../Context/index"
+import {  useNavigate, useParams } from "react-router-dom"
+import buttonCart from '../../image/button-cart.png'
+import buttonBack from '../../image/button-back.png'
+import { Context } from "../../Context/index"
+import { Collapse } from 'antd';
+import './Product.css'
 
 export const Product = () => {
+    const { Panel } = Collapse;
     const [product, setProduct] = useState({})
-    const {addToBasket, basket, setBasket} = useContext(Context)
     const params = useParams()
     const { idParam } = params
+    const {addToBasket, basket, setBasket} = useContext(Context)
     const navigate = useNavigate();
     
     useEffect (()=>{
@@ -38,8 +41,11 @@ export const Product = () => {
                         <button className="button main__product__btn-back" onClick={() => {goShop()}}><img src={buttonBack} alt='buttonBack'/></button>
                         <button className="button main__product__btn-cart" onClick={() => {addToBasket(product, basket, setBasket)}}><img src={buttonCart} alt='buttonCart'/></button>
                         <div className="main__product__description">
-                            <span>О товаре:</span>
-                            {product.description}
+                            <Collapse >
+                                <Panel header='Description' >
+                                    {product.description}
+                                </Panel>
+                            </Collapse>
                         </div>
                     </div>
                 </div>   

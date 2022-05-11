@@ -1,0 +1,114 @@
+
+.footer {
+    font-size: 18px;
+}
+
+.footer__top {
+    background-color: #DC2244;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.footer__top hr {
+    width: 60%;
+    margin: 30px auto;
+}
+
+.footer__top__wrapper {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.footer__wrapper__nav {
+    margin-right: 50px;
+}
+
+.footer__nav a {
+    color: white;
+}
+
+.footer__nav a:hover{
+    color: #93172D;
+}
+
+.footer__nav a:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer__adress {
+    width: 230px;
+    margin-right: 200px;
+}
+
+.footer__work-clock {
+    margin-top: 20px;
+}
+
+.footer__work-clock span,
+.footer__top__info__wrapper a {
+    display: inline-block;
+    color: white;
+}
+
+.footer__work-clock a:hover,
+.footer__top__info__wrapper a:hover {
+    color:#93172D;
+}
+
+.footer__top__info {
+    width: 210px;
+}
+
+.footer__top__info__wrapper {
+    margin-bottom: 20px;
+}
+
+.footer__social a:not(:last-child) {
+    margin-right: 20px;
+}
+
+.footer__top__form {
+    margin: 0 auto;
+    width: 650px;
+    height: 100px;
+}
+
+.footer__top__form p {
+    color: white;
+}
+
+.footer__wrapper__form input{
+    border: none;
+    width: 200px;
+    padding: 10px 15px;
+    margin-right: 5px;
+    outline: none;
+}
+
+.footer__form__btn {
+    background-color: #1B1464;
+    padding: 10px 20px;
+    margin-left: 20px;
+}
+
+.footer__form__btn:hover {
+    color:#DC2244
+}
+
+.show__message {
+    text-align: right;
+    padding-top: 10px;
+    color: white;
+}
+
+.footer__bottom {
+    color: #93172D;
+    background-color: white;
+}
+
+.footer__bottom__wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}

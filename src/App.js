@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 import '../src/css/style.css'
-import { Footer } from './Components/Footer'
-import { Header } from './Components/Header'
-import { Main } from './Components/Main'
+import { Footer } from './Components/Footer/Footer'
+import { Header } from './Components/Header/Header'
+import { Main } from './Components/Main/Main'
 import { Context } from './Context/index'
-import {addToBasket} from './utils/index'
+import {addToBasket} from './utils/addToBasket'
+import { GoToTop }from './utils/GoToTop'
 
 
 export const App = () => {
@@ -17,6 +17,7 @@ export const App = () => {
         <Header />
         <Main />
         <Footer />
+        <GoToTop />
       </div>
     </Context.Provider>
       

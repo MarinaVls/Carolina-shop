@@ -1,13 +1,12 @@
-import logo from '../image/logo.png'
-import Model from '../image/home-page.png'
-import infoReklama1 from '../image/home-page2.png'
-import infoReklama2 from '../image/home-page3.png'
-import bird from '../image/home-page4.png'
-import arrowRight from '../image/arrow-right.png'
+import logo from '../../image/logo.png'
+import Model from '../../image/home-page.png'
+import infoReklama1 from '../../image/home-page2.png'
+import infoReklama2 from '../../image/home-page3.png'
+import bird from '../../image/home-page4.png'
+import arrowRight from '../../image/arrow-right.png'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
-
-
+import './Home.css'
 export const Home = () => {
 
     useEffect( () => {    
@@ -33,14 +32,15 @@ export const Home = () => {
     }, []);
 
     return(
-        <main className="main">
             <div className="main__wrapper">
-                <section className="promo">
+                <div className="main__wrapper__promo">
                     <div className="container">
                         <div className="promo__wrapper">
-                            <div className="promo__wrapper__img">
+                            <div className="promo__img">
                                 <img src={Model} alt="Model" />
-                                <div className="promo__slider">
+                            </div>
+                            <div className="promo__slider">
+                                <div className="promo__slider__wrapper">
                                     <div className="promo__slider__count">01</div>
                                     <div className="promo__slider__line">
                                         <hr />
@@ -49,26 +49,10 @@ export const Home = () => {
                                     <Link to='/shop'><button className="button promo__slider__btn">В магазин</button></Link>
                                 </div>
                             </div>
-                            {/* <div className="promo__slider">
-                                <div className="promo__slider__count">02</div>
-                                <div className="promo__slider__line">
-                                    <hr />
-                                </div>
-                                <div className="promo__slider__description">Скидка 10 % при заказе от 50$</div>
-                                <Link to='/shop'><button className="button promo__slider__btn">В магазин</button></Link>
-                            </div>
-                            <div className="promo__slider">
-                                <div className="promo__slider__count">03</div>
-                                <div className="promo__slider__line">
-                                    <hr />
-                                </div>
-                                <div className="promo__slider__description">Бесплатные пробники с каждым заказом</div>
-                                <Link to='/shop'><button className="button promo__slider__btn">В магазин</button></Link>
-                            </div> */} 
                         </div>  
                     </div>
-                </section>
-                <section className="info">
+                </div>
+                <div className="main__wrapper__info">
                     <div className="container">
                             <div className="info__wrapper">
                                 <div className="info__wrapper__image-1">
@@ -77,8 +61,8 @@ export const Home = () => {
                                 <div className="info__wrapper__image-2">
                                     <img src={infoReklama2} alt="reklama"/>
                                     <div className="info__wrapper__reklama">
-                                        <div className="logo">
-                                        <img src={logo} alt="logo"/> 
+                                        <div className="info__logo">
+                                            <img src={logo} alt="logo"/> 
                                         </div>
                                         <hr />
                                         <p>Попробуйте энергетическую уходовую косметику Carolina для идеальной кожи.</p>
@@ -87,7 +71,7 @@ export const Home = () => {
                                 </div>
                             </div>
                         </div>
-                </section>
+                </div>
                 <div className="main__wrapper__description parallax">
                     <div className="container">
                         <div className="description__wrapper">
@@ -107,8 +91,6 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
-        </main>
-
     )
 }
 

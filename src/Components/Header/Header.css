@@ -1,0 +1,50 @@
+.header__wrapper {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__nav {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.header__nav a {
+    color: #999997; 
+    font-size: 20px;
+}
+
+.header__nav a:not(:last-child) {
+    margin-right: 20px;
+}
+
+.header__nav a:hover {
+    color: #1B1464;
+    cursor: pointer;
+}
+
+.header__wrapper__logo h2 {
+    color: #1B1464;
+    font-size: 24px;
+    margin: 0;
+    padding-left: 50px;
+}
+
+.header__logo {
+    width: 730px;
+    padding-left: 100px;
+}
+
+.header__basket{
+    position: relative;
+    color: #1B1464;
+}
+
+.header__basket span{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+    color: #1B1464;
+}

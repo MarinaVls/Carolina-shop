@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import facebook from '../image/f-icon.png';
-import pint from '../image/pint-icon.png'
-import insta from '../image/inst-icon.png'
+import facebook from '../../image/f-icon.png';
+import pint from '../../image/pint-icon.png'
+import insta from '../../image/inst-icon.png'
+import './Contacts.css'
 
 export const Contacts = () => {
     return (
@@ -12,19 +12,19 @@ export const Contacts = () => {
 
                     <div className="main__contacts__tel">
                         <span>Обслуживание клиентов</span>
-                        <span>+7 (495) 000-00-00</span>
+                        <a href='tel:+7 (495) 000-00-00'>+7 (495) 000-00-00</a>
                     </div>
                     <div className="main__contacts__adress">
                         <span>Наш адрес:</span>
                         <span>ул. Арбат, 1а, Москва, 119019, Россия</span>
                     </div>
                     <div className="main__contacts__social">
-                        <a><img src={insta} /></a>
-                        <a><img src={pint} /></a>
-                        <a><img src={facebook} /></a>
+                        <a href='https://www.instagram.com/?hl=ru' target='_blank'><img src={insta} /></a>
+                        <a href='https://www.pinterest.ru/' target='_blank'><img src={pint} /></a>
+                        <a href='https://www.facebook.com/' target='_blank'><img src={facebook} /></a>
                     </div>
                     <div className="main__contacts__form">
-                        <p>Отправьте письмо на <a href='#'>info@mysite.ru</a> или сообщение через форму ниже, и мы ответим в ближайшее время</p>
+                        <p>Отправьте письмо на <a href="mailto:info@mysite.ru">info@mysite.ru</a> или сообщение через форму ниже, и мы ответим в ближайшее время</p>
                         <form>
                             <div className="form__input">
                                 <div className="form__input__name">
@@ -33,7 +33,7 @@ export const Contacts = () => {
                                 </div>
                                 <div className="form__input__email">
                                      <label htmlFor='email'>Эл. почта*</label>
-                                    <input type="email" name="email" id='email' />
+                                    <input type="email" name="email" id='email' required />
                                 </div>
                             </div>
                             <label htmlFor='tema'>Тема </label>

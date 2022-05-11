@@ -1,0 +1,114 @@
+.main__shop h1 {
+    color: #1B1464;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-weight: bold;
+} 
+
+.main__shop__wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.main__shop__filter {
+    margin-right: 100px;
+}
+
+.main__shop__filter__wrapper {
+    width: 250px;
+    color: #1B1464;
+    font-family: 'El Messiri', sans-serif;
+}
+
+.main__shop__filter__sort {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main__shop__filter__wrapper hr {
+    background: #999997;
+}
+
+.main__shop__filter__wrapper label {
+    display: block;
+    font-size: 18px;
+    cursor:pointer;
+}
+
+.main__shop__filter__wrapper label input {
+    margin-right: 20px;
+    cursor:pointer;
+}
+
+.main__shop__products__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #1B1464;
+    font-size: 20px;
+}
+
+.main__shop__products__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 300px;
+}
+
+.main__shop__products__item__img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.main__shop__products__item__img img {
+    height: 100%;
+    transition: all 0.5s ease-out;
+}
+
+
+.main__shop__products__item__img img:hover{
+    transform: scale(1.3);
+}
+
+.main__shop__products__item__caption {
+    max-width: 300px;
+}
+
+.main__shop__products__item__name {
+    font-size: 20px;
+    height: 30px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.main__shop__products__item__name:hover {
+    color: #DC2244;
+}
+
+.main__shop__products__item__price {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main__shop__products__item__add {
+    text-align: center;
+}
+
+.main__shop__products__item__btn {
+    background-color: #1B1464;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.main__shop__products__item__btn:hover {
+    background-color: #DC2244;
+}
+
+.spin__wrapper {
+    text-align: center;
+    padding: 40px;
+}
