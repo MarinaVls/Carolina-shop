@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../image/logo.png'
 import shoppingBag from '../../image/shopping-bag.png'
 import { useContext } from 'react';
@@ -19,16 +19,17 @@ export const Header = () => {
             return count
         }
     }
+
     return(
         <header className='header'>
             <div className="container">
                 <div className="header__wrapper">
                     <nav className="header__wrapper__nav">
                         <ul className="header__nav">
-                            <Link to='/'><li>Главная</li></Link>
-                            <Link to='/shop'><li>Магазин</li></Link>
-                            <Link to='/about'><li>О нас</li></Link>
-                            <Link to='/contacts'><li>Контакты</li></Link>
+                            <NavLink className="no-active" to='/'><li>Главная</li></NavLink>
+                            <NavLink className="no-active" to='/shop'><li>Магазин</li></NavLink>
+                            <NavLink className="no-active" to='/about'><li>О нас</li></NavLink>
+                            <NavLink className="no-active" to='/contacts'><li>Контакты</li></NavLink>
                         </ul>
                     </nav>
                     <div className="header__wrapper__logo">
