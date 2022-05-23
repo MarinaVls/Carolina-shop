@@ -19,11 +19,9 @@ ul {
     margin: 0;
     padding: 0;
 }
+
 a {
     text-decoration: none;
-}
-  
-a {
     cursor: pointer;
 }
 
@@ -40,25 +38,6 @@ a {
     font-family: 'El Messiri', sans-serif;
 }
 
-
-/* .filter__modal {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.25);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main {
+    padding-top: 140px;
 }
-
-.filter__modal__body{
-    background-color: white;
-    pad: 20px;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-} */
-

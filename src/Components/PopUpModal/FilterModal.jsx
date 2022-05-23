@@ -1,12 +1,9 @@
-import { Collapse } from 'antd';
-import 'antd/dist/antd.css';
-
 export const FilterModal = ({ filterValue, setFilterValue}) => {
-    const { Panel } = Collapse;
 
     const clickFilter = (value) => {
         setFilterValue(value)
     }
+
     return (
         <div className="main__shop__filter__wrapper">
             <div className='main__shop__filter__sort'>Cортировать</div>

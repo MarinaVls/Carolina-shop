@@ -1,3 +1,7 @@
+export const getBasketData = () => {
+    return localStorage.getItem('basket') ? JSON.parse(localStorage.getItem('basket')) : []
+}
+
 export const addToBasket = (product, basket, setBasket) => {
     
     let findIndex = basket.findIndex( ({id}) => id ===product.id)

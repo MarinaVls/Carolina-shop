@@ -35,7 +35,7 @@
 
 .promo__slider__count {
     font-size: 50px;
-    width: 100px;
+    width: 70px;
     text-align: center;
 }
 
@@ -46,11 +46,10 @@
 }
 
 .promo__slider__description{
-    width: 400px;
+    width: 40%;
     font-size: 20px;
-    margin-right: 100px;
+    margin-right: 50px;
     text-align: center;
-    margin-left: 50px;
     background: linear-gradient(90deg, #1B1464, white );
     animation: animate 5s linear infinite;
     background-size: 90%; 
@@ -77,12 +76,12 @@
 .info__wrapper {
     display: flex;
     margin-bottom: 100px;
+    justify-content: center;
 }
 
 .info__wrapper__image-1,
 .info__wrapper__image-2 {
-    height: 590px;
-    width: 50%;
+    width: 100%;
 }
 
 .info__wrapper__image-1 img,
@@ -128,7 +127,6 @@
     color: #1b1464;
     font-weight: bold;
     font-size: 20px;
-    width: 400px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -180,3 +178,99 @@
 .description__wrapper a {
     margin: 0 auto;
 }
+
+@media screen and (max-width: 1024px){
+    .info__wrapper__reklama hr,
+    .info__logo{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .main__wrapper__promo {
+        margin-bottom: 120px;
+    }
+    .promo__slider {
+        width: 90%;
+    }
+
+    .promo__slider__description {
+        margin-right: 20px;
+    }
+
+    .promo__slider__btn {
+        padding: 10px 20px;
+    }
+
+    .info__wrapper {
+        margin-bottom: 50px;
+        flex-direction: column;
+    }
+
+    .info__wrapper__reklama {
+        width: 60%;
+        height: 70%;
+    }
+
+    .description__wrapper p {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 426px){
+    .menuActive {
+        opacity: 1;
+        width: 100%;
+    }
+
+    .main__wrapper__promo {
+        margin-bottom: 50px;
+    }
+
+    .promo__wrapper {
+        position: static;
+    }
+    .promo__slider {
+        position: static;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .promo__slider__wrapper {
+        height: 100px;
+    }
+    .promo__slider__count {
+        font-size: 30px;
+    }
+
+    .promo__slider__line hr {
+        width: 70px;
+    }
+
+    .promo__slider__description {
+        font-size: 16px;
+    }
+    .promo__slider a{
+        display: none;
+    }
+
+    .info__wrapper__reklama {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .info__wrapper__reklama p {
+        font-size: 16px;
+    }
+
+    .description__wrapper h1 {
+        font-size: 35px;
+    }
+    .description__wrapper p {
+        font-size: 18px;
+    }
+}
+

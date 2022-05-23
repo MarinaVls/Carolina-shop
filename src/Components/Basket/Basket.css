@@ -24,12 +24,13 @@
 .basket__shopping__items hr,
 .basket__order hr {
     width: 100%;
-    background-color: #999997;
+    height: 1px;
+    background-color: #1B1464;
 }
 
 .basket__shopping__item {
     display: flex;
-    margin-top: 20px;
+    margin: 20px 0;
     justify-content: space-between;
     align-items: center;
 }
@@ -40,11 +41,12 @@
 
 .basket__shopping__item__img img {
     width: 100%;
+    height: 100%;
     cursor: pointer;
 }
 
 .basket__shopping__item__description {
-    width: 300px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     color: #1B1464;
@@ -52,6 +54,44 @@
 
 .basket__shopping__item__name {
     margin-bottom: 20px;
+    width: 200px;
+}
+
+.basket__shopping__item__count {
+    max-width: 130px;
+}
+.count__input {
+    width: 60px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+  
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+  
+.count__down,
+.count__up {
+    background-color: white;
+}
+  
+.count__down {
+    margin-left: 5px;
+}
+.count__up {
+    margin-right: 5px;
+}
+
+.basket__shopping__item__price__total {
+    width: 50px;
+}
+
+.basket__shopping__item__count__wrapper {
+    border: 2px solid #1B1464;
+    display: flex;
 }
 
 .basket__shopping__delete {
@@ -61,10 +101,6 @@
 
 .basket__order {
     width: 300px;
-}
-
-.basket__order span {
-
 }
 
 .basket__order__wrapper {
@@ -98,3 +134,69 @@
     margin-left: 5px;
     font-size: 14px;
 }
+
+@media screen and (max-width: 768px){
+    .basket__wrapper {
+        flex-direction: column;
+    }
+
+    .basket__shopping {
+        margin-bottom: 30px;
+        width: auto;
+        margin-right: 0px;
+    }
+
+    .basket__order {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 426px){
+    .basket__shopping__item {
+        position: relative;
+        margin: 10px 0;
+        font-size: 18px;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .basket__shopping__item__name {
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+
+    .basket__shopping__item__count {
+        position: absolute;
+        bottom: 0;
+        left: 40%;
+    }
+    .basket__shopping__item__price__total {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .basket__shopping__item__button {
+        position: absolute;
+        right: 0;
+        }
+
+} 
+
+@media screen and (max-width: 320px){
+    .basket__shopping__item__name {
+        overflow: hidden;
+        height: 30px;
+        margin-bottom: 0px;
+        margin-right: 10px;
+    }
+
+    .basket__shopping__item__count {
+        left: 27%;
+    }
+
+    .count__input {
+        height: auto;
+    }
+}
+

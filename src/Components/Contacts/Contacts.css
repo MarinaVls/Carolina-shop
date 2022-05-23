@@ -77,10 +77,19 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    color: white;
 }
 
 .form__input input {
     width: 250px;
+}
+
+
+.inputError {
+    position: absolute;
+    font-size: 14px;
+    color: #DC2244;
+    height: 20px;
 }
 
 .main__contacts__form textarea {
@@ -89,6 +98,7 @@
     padding-left: 10px;
     padding-top: 10px;
     outline: none;
+    color:#1B1464;
 }
 
 .main__contacts__form .contacts__form__btn{
@@ -96,4 +106,41 @@
     width: 100%;
     font-size: 16px;
     padding: 5px;
+}
+
+
+@media screen and (max-width: 426px){
+    .main__contacts__form {
+        width: auto;
+        text-align: center;
+    }
+
+    .main__contacts__form form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form__input {
+        display: block;
+    }
+
+    .form__input__name {
+        margin-bottom: 20px;
+    }
+
+    .main__contacts__form input {
+        width: 250px;
+    }
+
+    .main__contacts__form textarea {
+        width: 250px;
+        margin: 20px auto;
+    }
+
+    .main__contacts__form .contacts__form__btn {
+        width: auto;
+        padding: 10px 20px;
+    }
 }

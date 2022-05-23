@@ -36,7 +36,7 @@
 }
 
 .main__shop__filter__wrapper label input {
-    margin-right: 20px;
+    margin-right: 10px;
     cursor:pointer;
 }
 
@@ -111,4 +111,65 @@
 .spin__wrapper {
     text-align: center;
     padding: 40px;
+}
+
+@media screen and (max-width: 1024px){
+    .main__shop__wrapper{
+        flex-direction: column;
+    }
+
+    .main__shop__filter {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .main__shop__filter__wrapper {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .main__shop__filter__sort {
+        margin-right: 20px;
+    }
+
+    .main__shop__filter__wrapper label:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+
+@media screen and (max-width: 426px){
+    .main__shop__products__items {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__shop__filter__wrapper {
+        flex-direction: column;
+        width: 70%;
+        margin: 0 auto;
+        align-items: unset;
+    }
+
+    .main__shop__filter__wrapper hr {
+        margin-bottom: 10px;
+    }
+    .main__shop__filter__sort {
+        margin-right: 0px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .main__shop__filter__wrapper label {
+        display: inline;
+        font-size: 14px;
+    }
+    .main__shop__filter__wrapper label:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 376px){
+    
 }

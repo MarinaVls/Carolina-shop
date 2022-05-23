@@ -2,14 +2,18 @@ import facebook from '../../image/f-icon.png';
 import pint from '../../image/pint-icon.png'
 import insta from '../../image/inst-icon.png'
 import './Contacts.css'
+import { useContext } from 'react';
+import { Context } from '../../Context';
+import { FormPopUp } from '../PopUpModal/FormPopUp';
 
 export const Contacts = () => {
+    const { showPopUp, openPopUp } = useContext(Context) 
+
     return (
         <main className="main__contacts">
             <div className="container">
                 <div className="main__contacts__wrapper">
                     <h1>Свяжитесь с нами</h1>
-
                     <div className="main__contacts__tel">
                         <span>Обслуживание клиентов</span>
                         <a href='tel:+7 (495) 000-00-00'>+7 (495) 000-00-00</a>
@@ -29,7 +33,7 @@ export const Contacts = () => {
                             <div className="form__input">
                                 <div className="form__input__name">
                                     <label htmlFor='name'>Имя</label>
-                                    <input type="text" name="name" id='name' />
+                                    <input type="text" name="name" id='name' required />
                                 </div>
                                 <div className="form__input__email">
                                      <label htmlFor='email'>Эл. почта*</label>
@@ -37,9 +41,10 @@ export const Contacts = () => {
                                 </div>
                             </div>
                             <label htmlFor='tema'>Тема </label>
-                            <input type="text" name="tema" id='tema' />
+                            <input type="text" name="tema" id='tema' required/>
                             <textarea name='message' minLength={10} rows={3} placeholder='Отправьте сообщение'></textarea>
-                            <button className="button contacts__form__btn">Отправить</button>
+                            <button className="button contacts__form__btn"  onClick={()=>{openPopUp()}}>Отправить</button>
+                            {showPopUp && <FormPopUp />}
                         </form>
                     </div>
                 </div>

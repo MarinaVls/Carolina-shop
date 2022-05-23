@@ -13,19 +13,19 @@ export const ShopItem = ({product}) => {
 
     return (
         <li className="main__shop__products__item">
-                                <div className="main__shop__products__item__img">
-                                    <img src={image_link} alt="product"/>
-                                </div>
-                                <div className="main__shop__products__item__caption">
-                                    <div className="main__shop__products__item__name" onClick={() => {openClick()}}>
-                                        {name}
-                                    </div>
-                                    <div className="main__shop__products__item__price">{price}$</div>
-                                    <div className="main__shop__products__item__add">
-                                        <button id={id} onClick={() => {addToBasket(product, basket, setBasket)}} className="button main__shop__products__item__btn" >Добавить в корзину</button>
-                                    </div>
-                                </div>
-                            </li>
+            <div className="main__shop__products__item__img">
+                <img src={image_link} alt="product"/>
+            </div>
+            <div className="main__shop__products__item__caption">
+                <div className="main__shop__products__item__name" onClick={() => {openClick()}}>
+                    {name}
+                </div>
+                <div className="main__shop__products__item__price">{price}$</div>
+                <div className="main__shop__products__item__add">
+                    <button id={id} onClick={() => {addToBasket(product, basket, setBasket)}} className="button main__shop__products__item__btn" >Добавить в корзину</button>
+                </div>
+            </div>
+        </li>
     )
 }
 

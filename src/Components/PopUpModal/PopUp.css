@@ -1,0 +1,55 @@
+
+.popUp__modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(102, 100, 100, 0.25);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popUp__modal__wrapper {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: #1B1464;
+}
+
+.popUp__modal__wrapper h3 {
+    font-size: 26px;
+    color: #1B1464;
+}
+
+.popUp__modal__wrapper p {
+    font-size: 18px;
+}
+.popUp__modal__btn__ok {
+    font-size: 18px;
+    background-color: #1B1464;
+    padding: 10px 0px;
+    width: 150px;  
+}
+.popUp__modal__btn__ok:hover {
+    background-color: #DC2244;
+}
+.popUp__modal__btn__close {
+    width: 50px;
+    color: #1B1464;
+    background-color: white;
+    border: none;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    top: 10px;
+}
