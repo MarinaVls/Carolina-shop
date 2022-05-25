@@ -5,14 +5,14 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(102, 100, 100, 0.25);
+    background-color: rgba(102, 100, 100, 0.65);
     z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.popUp__modal__wrapper {
+.popUp__modal__content {
     position: relative;
     background-color: #fff;
     padding: 20px;
@@ -26,19 +26,28 @@
     color: #1B1464;
 }
 
-.popUp__modal__wrapper h3 {
+.popUp__modal__content span {
+    color: #DC2244;
+}
+.popUp__modal__content h3 {
     font-size: 26px;
     color: #1B1464;
 }
+.popUp__modal__content__adress {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-.popUp__modal__wrapper p {
-    font-size: 18px;
+.popUp__modal__content p {
+    font-size: 16px;
+    text-align: center;
 }
 .popUp__modal__btn__ok {
     font-size: 18px;
     background-color: #1B1464;
     padding: 10px 0px;
-    width: 150px;  
+    width: 150px; 
 }
 .popUp__modal__btn__ok:hover {
     background-color: #DC2244;

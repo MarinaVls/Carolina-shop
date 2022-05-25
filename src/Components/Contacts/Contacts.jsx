@@ -2,12 +2,8 @@ import facebook from '../../image/f-icon.png';
 import pint from '../../image/pint-icon.png'
 import insta from '../../image/inst-icon.png'
 import './Contacts.css'
-import { useContext } from 'react';
-import { Context } from '../../Context';
-import { FormPopUp } from '../PopUpModal/FormPopUp';
 
 export const Contacts = () => {
-    const { showPopUp, openPopUp } = useContext(Context) 
 
     return (
         <main className="main__contacts">
@@ -23,7 +19,7 @@ export const Contacts = () => {
                         <span>ул. Арбат, 1а, Москва, 119019, Россия</span>
                     </div>
                     <div className="main__contacts__social">
-                        <a href='https://www.instagram.com/?hl=ru' target='_blank'><img src={insta} /></a>
+                        <a className='insta' href='https://www.instagram.com/?hl=ru' target='_blank'><img src={insta} /></a>
                         <a href='https://www.pinterest.ru/' target='_blank'><img src={pint} /></a>
                         <a href='https://www.facebook.com/' target='_blank'><img src={facebook} /></a>
                     </div>
@@ -43,8 +39,7 @@ export const Contacts = () => {
                             <label htmlFor='tema'>Тема </label>
                             <input type="text" name="tema" id='tema' required/>
                             <textarea name='message' minLength={10} rows={3} placeholder='Отправьте сообщение'></textarea>
-                            <button className="button contacts__form__btn"  onClick={()=>{openPopUp()}}>Отправить</button>
-                            {showPopUp && <FormPopUp />}
+                            <button className="button contacts__form__btn">Отправить</button>
                         </form>
                     </div>
                 </div>

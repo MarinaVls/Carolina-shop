@@ -7,7 +7,7 @@ export const ImageList = ({image}) => {
             <div className="img__item__wrapper">
                 <img src={image_link} alt='изображение товара' />
                 <button className="button img__item__btn__share">
-                    <img src={shareIcon} alt="share"/>
+                    <a href="mailto:"><img src={shareIcon} alt="share"/></a>
                 </button>
                 <div className="img__item__text">{name}</div>
             </div>

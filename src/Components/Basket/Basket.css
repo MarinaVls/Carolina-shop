@@ -21,8 +21,7 @@
     font-size: 26px;
 }
 
-.basket__shopping__items hr,
-.basket__order hr {
+.hr {
     width: 100%;
     height: 1px;
     background-color: #1B1464;
@@ -53,8 +52,11 @@
 }
 
 .basket__shopping__item__name {
-    margin-bottom: 20px;
     width: 200px;
+}
+
+.basket__shopping__item__price {
+    margin-top: 10px;
 }
 
 .basket__shopping__item__count {
@@ -95,8 +97,12 @@ input::-webkit-inner-spin-button {
 }
 
 .basket__shopping__delete {
-    color: #999997; ;
+    color: #DC2244;
     background-color: transparent;
+    width: 20px;
+}
+.basket__shopping__delete:hover {
+    font-size: 28px;
 }
 
 .basket__order {
@@ -161,8 +167,13 @@ input::-webkit-inner-spin-button {
     }
 
     .basket__shopping__item__name {
-        margin-bottom: 5px;
+        height: 50px;
+        overflow: hidden;
         font-size: 18px;
+    }
+
+    .basket__shopping__item__price {
+        margin-top: 5px;
     }
 
     .basket__shopping__item__count {

@@ -44,10 +44,10 @@ export const Header = () => {
                             <h2>магазин натуральной косметики</h2>
                         </div>
                         <div className="header__basket">
-                            <Link to='/basket'>
+                            <NavLink to='/basket'>
                                 <img src={shoppingBag} alt='basket'/>
                                 <span>{getBasketCount()}</span>
-                            </Link>
+                            </NavLink>
                         </div>
                     </nav>
                 </div>

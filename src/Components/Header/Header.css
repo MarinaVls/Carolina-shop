@@ -33,6 +33,7 @@
 .header__menu__wrapper .no-active {
     color: #999997;
 }
+
 .header__menu__wrapper .active {
     color: #1B1464;
 }
@@ -52,11 +53,12 @@
     position: relative;
     color: #1B1464;
 }
+
 .header__basket span{
     position: absolute;
     top: 20px;
-    right: 20px;
-    font-size: 16px;
+    left: 20px;
+    font-size: 18px;
     color: #1B1464;
 }
 

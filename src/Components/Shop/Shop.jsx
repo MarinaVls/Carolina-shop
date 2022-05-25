@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { FilterModal } from "../PopUpModal/FilterModal"
+import { FilterModal } from "./FilterModal"
 import { ShopItem } from "../Shop/ShopItem"
 import { Spin, Space } from 'antd';
 import 'antd/dist/antd.css';

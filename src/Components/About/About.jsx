@@ -6,7 +6,15 @@ import { Carousel } from 'antd';
 
 export const About = () => {
     const { listOfImage } = useContext(Context)
- 
+
+    const contentStyle = {
+        height: '160px',
+        color: '#fff',
+        lineHeight: '160px',
+        textAlign: 'center',
+        background: '#364d79',
+    };
+
     return (
         <div className="main__about">
             <div className="main__about__wrapper">
@@ -31,9 +39,9 @@ export const About = () => {
                     <div className="slider">
                         <div className="slider__wrapper">
                             <ul className="main__about__product__img__list">
-                                <Carousel effect="fade">
+                                <Carousel autoplay>
                                 {listOfImage.slice(0,10).map((image, index)=>{
-                                    return <ImageList image={image} key={index}/>
+                                    return <ImageList image={image} key={index} style={contentStyle}/>
                                 })} 
                                 </Carousel>
                             </ul>

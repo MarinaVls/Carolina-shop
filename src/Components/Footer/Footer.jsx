@@ -3,12 +3,8 @@ import facebook from '../../image/f-icon.png';
 import pint from '../../image/pint-icon.png'
 import insta from '../../image/inst-icon.png'
 import './Footer.css'
-import { useContext } from 'react';
-import { Context } from "../../Context"
-import { FormPopUp } from '../PopUpModal/FormPopUp';
 
 export const Footer = () => {
-    const {showPopUp, openPopUp} = useContext(Context);
 
     return (
         <footer className="footer">
@@ -49,8 +45,7 @@ export const Footer = () => {
                         <form method='get' action='#' className="footer__wrapper__form">
                             <input id='firstName' type="text" name="name" placeholder="Имя" required/>
                             <input id='phone' type="tel" name="phone" placeholder="Телефон" required/>
-                            <button className="button footer__form__btn" type="submit" onClick={()=>{openPopUp()}}>Подписаться</button>
-                            {showPopUp && <FormPopUp />}
+                            <button className="button footer__form__btn" type="submit">Подписаться</button>
                         </form>
                     </div>
                 </div>
