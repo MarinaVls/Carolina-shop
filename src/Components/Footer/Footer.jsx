@@ -3,6 +3,7 @@ import facebook from '../../image/f-icon.png';
 import pint from '../../image/pint-icon.png'
 import insta from '../../image/inst-icon.png'
 import './Footer.css'
+import { FormaData } from '../Forma/FormaData';
 
 export const Footer = () => {
 
@@ -42,11 +43,7 @@ export const Footer = () => {
                     <hr />
                     <div className="footer__top__form">
                         <p>Новости, акции и скидки по эл. почте</p>
-                        <form method='get' action='#' className="footer__wrapper__form">
-                            <input id='firstName' type="text" name="name" placeholder="Имя" required/>
-                            <input id='phone' type="tel" name="phone" placeholder="Телефон" required/>
-                            <button className="button footer__form__btn" type="submit">Подписаться</button>
-                        </form>
+                        <FormaData />
                     </div>
                 </div>
             </div>

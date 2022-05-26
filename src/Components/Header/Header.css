@@ -1,6 +1,5 @@
-
 .header__wrapper{
-    height: 150px;
+    height: 160px;
     width: 100vw;
     position: fixed;
     background-color: #fff;
@@ -81,7 +80,7 @@
         left: 0;
         background-color: #fff;
         z-index: 50;
-        opacity: 0.9;
+        opacity: 1;
     }
     .menuActive a {
         font-size: 20px;
@@ -93,10 +92,7 @@
         margin-bottom: 20px;
         margin-right: 0;
     }
-    .menuActive a:hover {
-        background-color: #DC2244;
-        color: #fff;
-    }
+  
     .header__menu__wrapper {
         display: flex;
         flex-direction: column;

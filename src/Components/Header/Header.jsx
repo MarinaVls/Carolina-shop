@@ -9,6 +9,7 @@ import './Header.css'
 export const Header = () => {
     const { basket } = useContext(Context)
     const [menuActive, setMenuActive] = useState(false)
+
     const getBasketCount = () => {
         let count = 0;
         if(basket.length === 0) {
@@ -19,7 +20,7 @@ export const Header = () => {
             })
             return count
         }
-    }
+    } 
 
     return(
         <header className="header">
@@ -44,10 +45,10 @@ export const Header = () => {
                             <h2>магазин натуральной косметики</h2>
                         </div>
                         <div className="header__basket">
-                            <NavLink to='/basket'>
+                            <Link to='/basket'>
                                 <img src={shoppingBag} alt='basket'/>
-                                <span>{getBasketCount()}</span>
-                            </NavLink>
+                                <span>{getBasketCount()}</span> 
+                            </Link>
                         </div>
                     </nav>
                 </div>

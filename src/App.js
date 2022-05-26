@@ -11,9 +11,9 @@ export const App = () => {
   const basketData = getBasketData();
   const [basket, setBasket] = useState(basketData)
   const [listOfImage, setListOfImage] = useState(JSON.parse(localStorage.getItem('shopData')) || [])
-  const [modalActive, setModalActive] = useState(false)
+
   return (
-    <Context.Provider value = {{ addToBasket, basket, setBasket, listOfImage, setListOfImage, modalActive, setModalActive }}>
+    <Context.Provider value = {{ addToBasket, basket, setBasket, listOfImage, setListOfImage}}>
       <div className="App">
         <Header />
         <Main />

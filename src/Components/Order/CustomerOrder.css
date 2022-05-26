@@ -1,0 +1,45 @@
+.ant-drawer-body {
+    padding: 18px !important;
+}
+
+.ant-drawer-header  { 
+    border: none;
+    border-radius: 0px;
+    background-color: #1B1464 !important ;
+}
+
+.ant-drawer-title  {
+    font-size: 26px !important;
+    color: white !important;
+}
+
+.ant-drawer-close {
+    color: white !important ;
+}
+
+.ant-drawer-close:hover {
+    color: #DC2244 !important;
+} 
+
+.customer__order__basket__items {
+    height: 250px;
+    overflow:scroll;
+}
+
+.price__total__order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #DC2244;
+}
+
+.customer__data {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1B1464;
+    margin-bottom: 20px;
+}
+

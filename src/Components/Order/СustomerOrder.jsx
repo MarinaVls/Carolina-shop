@@ -1,12 +1,13 @@
 import { Drawer } from 'antd';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Context } from '../../Context';
-import { BasketItem } from './BasketItem';
-import { FormOrder } from './FormOrder';
+import { BasketItem } from '../Basket/BasketItem';
+import { FormaOrder } from '../Forma/FormaOrder';
 import './CustomerOrder.css'
 
 export const CustomerOrder = ({visible, setVisible, total}) => {
-    const { basket, setBasket, setModalActive } = useContext(Context)
+    const { basket, setBasket } = useContext(Context)
+    const [orderPopUp, setOrderPopUp] = useState(false)
 
     const onClose = () => {
         setVisible(false);
@@ -14,13 +15,13 @@ export const CustomerOrder = ({visible, setVisible, total}) => {
 
     const onCloseAndClearBasket = () => {
         setVisible(false)
-        setModalActive(false)
+        setOrderPopUp(false)
         setBasket([])
-        localStorage.setItem('basket', '');
+        localStorage.setItem('basket', '')
     }; 
 
     return (
-      <Drawer title="Оформление заказа" placement="right" onClose={onClose}  visible={visible}>
+      <Drawer title="Оформление заказа" placement="right" onClose={onClose}  visible={visible} >
         <div className="customer__order__wrapper">
             <div className="customer__order__basket__items">
                 <ul className="basket__shopping__items">
@@ -35,7 +36,7 @@ export const CustomerOrder = ({visible, setVisible, total}) => {
             </div>
             <div className="customer__wrapper">
                 <div className="customer__data">Контактные данные</div>
-                {visible && <FormOrder onCloseAndClearBasket={onCloseAndClearBasket}/>}
+                {visible && <FormaOrder onCloseAndClearBasket={onCloseAndClearBasket} orderPopUp={orderPopUp} setOrderPopUp={setOrderPopUp}/>}
             </div>
         </div>
       </Drawer>
