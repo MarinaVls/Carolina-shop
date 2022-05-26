@@ -43,25 +43,25 @@
 }
 
 .ant-collapse {
-    color: #1B1464;
-    font-size: 18px;
-    background-color: #1B1464;
-    border: none;
+    color: #1B1464 !important;
+    font-size: 18px !important;
+    background-color: #1B1464 !important;
+    border: none !important;
 }
 
 .ant-collapse > .ant-collapse-item {
-    border-bottom: none;
+    border-bottom: none !important;
 }
 
 .ant-collapse > .ant-collapse-item > .ant-collapse-header {
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
+    font-size: 20px !important;
+    color: white !important;
+    font-weight: bold !important;
 }
 
 .ant-collapse-item:last-child > .ant-collapse-content {
-    color: #1B1464;
-    background-color: #fff;
+    color: #1B1464 !important;
+    background-color: #fff !important;
 }
 
 @media screen and (max-width: 1024px){
@@ -99,7 +99,7 @@
     }
 
     .ant-collapse {
-        font-size: 14px;
+        font-size: 14px !important;
     }
 }
 @media screen and (max-width: 426px){
