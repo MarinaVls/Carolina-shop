@@ -29,6 +29,10 @@
     text-align: center;
 }
 
+.main__contacts__tel a:hover {
+    color: #DC2244;
+}
+
 .main__contacts__tel a {
     color: white;
 }
