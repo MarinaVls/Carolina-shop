@@ -41,7 +41,7 @@ export const Product = () => {
                         <button className="button main__product__btn-back" onClick={() => {goShop()}}><img src={buttonBack} alt='buttonBack'/></button>
                         <button className="button main__product__btn-cart" onClick={() => {addToBasket(product, basket, setBasket)}}><img src={buttonCart} alt='buttonCart'/></button>
                         <div className="main__product__description">
-                            <Collapse >
+                            <Collapse className="product__collapse">
                                 <Panel header='Description' >
                                     {product.description}
                                 </Panel>

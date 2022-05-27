@@ -21,7 +21,7 @@ export const CustomerOrder = ({visible, setVisible, total}) => {
     }; 
 
     return (
-      <Drawer title="Оформление заказа" placement="right" onClose={onClose}  visible={visible} >
+      <Drawer className='order__drawer' title="Оформление заказа" placement="right" onClose={onClose}  visible={visible} >
         <div className="customer__order__wrapper">
             <div className="customer__order__basket__items">
                 <ul className="basket__shopping__items">

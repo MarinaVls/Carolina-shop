@@ -1,14 +1,54 @@
-.ant-col-8 {    
-    flex: 0 0 25% !important ;
+.form__order.ant-drawer-header {
+    border: none;
+    border-radius: 0px;
+    background-color: #1B1464;
 }
-.ant-form-item-label > label {
-    font-size: 16px !important ;
-    color: #1B1464 !important ;
+
+.form__order.ant-drawer-title {
+    font-size: 26px;
+    color: white;
 }
-.ant-form-item-explain-error {
-    color: #1B1464 !important;
+
+.form__order.ant-drawer-close {
+    color: white;
 }
-.ant-btn-primary:hover, .ant-btn-primary:focus {
+
+.form__order.ant-drawer-close:hover {
+    color: #DC2244;
+}
+
+.form__order .ant-form-item {
+    margin-bottom: 10px;
+}
+
+.form__order .ant-form-item:last-child{
+    margin-bottom: 0px;
+}
+
+.form__order .ant-col-8 {    
+    flex: 0 0 25%;
+}
+
+.form__order .ant-form-item-label > label {
+    font-size: 16px;
+    color: #1B1464;
+}
+
+.form__order .ant-input {
+    color: #1B1464;
+    outline: none;
+}
+
+.form__order .ant-btn {
+   height: auto;
+   padding: 8px 0;
+   background-color: #1B1464;
+   border: none;
+   font-size: 16px;
+}
+
+.form__order .ant-btn-primary:hover, .form__order .ant-btn-primary:focus {
     border-color: #DC2244;
-    background-color: #433c98 !important;
+    background: #DC2244;
 }
+

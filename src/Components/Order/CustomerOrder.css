@@ -1,29 +1,34 @@
-.ant-drawer-body {
-    padding: 18px !important;
+.order__drawer.ant-drawer-body {
+    padding: 18px ;
 }
 
-.ant-drawer-header  { 
+.order__drawer .ant-drawer-header  { 
     border: none;
     border-radius: 0px;
-    background-color: #1B1464 !important ;
+    background-color: #1B1464 ;
 }
 
-.ant-drawer-title  {
-    font-size: 26px !important;
-    color: white !important;
+.order__drawer .ant-drawer-title  {
+    font-size: 26px ;
+    color: white ;
 }
 
-.ant-drawer-close {
-    color: white !important ;
+.order__drawer .ant-drawer-close {
+    color: white ;
 }
 
-.ant-drawer-close:hover {
-    color: #DC2244 !important;
+.order__drawer .ant-drawer-close:hover {
+    color: #DC2244 ;
 } 
 
 .customer__order__basket__items {
-    height: 250px;
-    overflow:scroll;
+    height: 210px;
+    width: 320px;
+    overflow: auto;
+}
+
+.order__drawer .basket__shopping__items {
+    width: 300px;
 }
 
 .price__total__order {
@@ -40,6 +45,6 @@
     font-size: 22px;
     font-weight: bold;
     color: #1B1464;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 

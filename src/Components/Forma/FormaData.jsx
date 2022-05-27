@@ -1,6 +1,7 @@
 import { Button, Form, Input, Select, Space } from 'antd';
 import { useState } from 'react';
 import { DataPopUpModal } from '../PopUpModal/DataPopUpModal';
+import './FormaData.css'
 
 const { Option } = Select;
 
@@ -23,31 +24,28 @@ export const FormaData = () => {
     );
 
     return (
-    <div className='forma'>
     <Form name="complex-form" onFinish={onFinish} labelCol={{ span: 3 }} wrapperCol={{span: 16 }} 
-        initialValues={{prefix: '375(29)'}} style={{ display: 'flex', justifyContent: 'center', height: 56}}>
-        <Form.Item label="" style={{marginBottom: 0, marginRight: 10}}>
+        initialValues={{prefix: '375(29)'}} className="form__data">
+        <Form.Item label="">
             <Space >
-                <Form.Item name="username" style={{marginBottom: 0}} noStyle rules={[{required: true,message: 'Введите Ваше имя'}]}>
+                <Form.Item name="username" rules={[{required: true,message: 'Введите Ваше имя'}]}>
                     <Input style={{width: 230}} placeholder="Имя"/>
                 </Form.Item>
             </Space>
         </Form.Item>
-        <Form.Item label="" style={{marginBottom: 0, marginRight: 10}} >
+        <Form.Item label="">
             <Space>
-                <Form.Item name="phone" style={{marginBottom: 0}} rules={[{required: true, message: 'Введите номер телефона'}]}>
+                <Form.Item name="phone" rules={[{required: true, message: 'Введите номер телефона'}]}>
                     <Input addonBefore={prefixSelector} style={{width: 230}} placeholder="Телефон"/>
                 </Form.Item>
             </Space>
         </Form.Item>
-        <Form.Item label=" " colon={false} style={{marginBottom: 0, marginRight: 10}} >
-            <Button type="primary" htmlType="submit" 
-                style={{height: 35, width: 200, backgroundColor: 'rgb(27, 20, 100)', border: 'none', fontSize: 18}} >
+        <Form.Item label=" " colon={false}>
+            <Button type="primary" htmlType="submit" >
                     Подписаться
             </Button>
              {dataPopUp && <DataPopUpModal setDataPopUp={setDataPopUp}/>} 
         </Form.Item>
     </Form>
-    </div>
     )
 }
