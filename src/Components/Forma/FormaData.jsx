@@ -1,4 +1,5 @@
 import { Button, Form, Input, Select, Space } from 'antd';
+import { useForm } from 'antd/lib/form/Form';
 import { useState } from 'react';
 import { DataPopUpModal } from '../PopUpModal/DataPopUpModal';
 import './FormaData.css'
@@ -7,8 +8,10 @@ const { Option } = Select;
 
 export const FormaData = () => {
     const [dataPopUp, setDataPopUp] = useState(false)
+    const [form] = useForm()
     
     const onFinish = () => {
+        form.resetFields();
         setDataPopUp(true);
     }; 
 
@@ -24,7 +27,7 @@ export const FormaData = () => {
     );
 
     return (
-    <Form name="complex-form" onFinish={onFinish} labelCol={{ span: 3 }} wrapperCol={{span: 16 }} 
+    <Form form={form} name="complex-form" onFinish={onFinish} labelCol={{ span: 3 }} wrapperCol={{span: 16 }} 
         initialValues={{prefix: '375(29)'}} className="form__data">
         <Form.Item label="">
             <Space >
