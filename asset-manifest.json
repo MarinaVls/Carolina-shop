@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Carolina-shop/static/css/main.17979377.css",
+    "main.js": "/Carolina-shop/static/js/main.fd6608aa.js",
+    "static/media/home-page.png": "/Carolina-shop/static/media/home-page.a98141b2564d977c86be.png",
+    "static/media/home-page3.png": "/Carolina-shop/static/media/home-page3.68a6da55824dd2a1b44c.png",
+    "static/media/home-page2.png": "/Carolina-shop/static/media/home-page2.c0045ce605c10805134c.png",
+    "static/media/home-page5.png": "/Carolina-shop/static/media/home-page5.ebbea08530ed038b82d8.png",
+    "static/media/home-page4.png": "/Carolina-shop/static/media/home-page4.f7ae138e781cc1e812e9.png",
+    "index.html": "/Carolina-shop/index.html",
+    "main.17979377.css.map": "/Carolina-shop/static/css/main.17979377.css.map",
+    "main.fd6608aa.js.map": "/Carolina-shop/static/js/main.fd6608aa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.17979377.css",
+    "static/js/main.fd6608aa.js"
+  ]
+}
